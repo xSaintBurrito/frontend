@@ -7,7 +7,7 @@ class ShowUsers extends Component {
         users: []
       }
     getUsers = () => {
-        axios.get("/getUsersInfo").then(response => {
+        axios.get("https://learn-more-for-uni.herokuapp.com/getUsersInfo",{ crossdomain: true }).then(response => {
             this.prepareData(response.data)
         })
     }

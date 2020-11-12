@@ -23,7 +23,7 @@ class RateMovie extends Component {
             ratings:this.state.ratings,
             username:this.state.username
         }
-        axios.post("/saveUser", data)
+        axios.post("https://learn-more-for-uni.herokuapp.com/saveUser", data,{ crossdomain: true })
     }
 
     listElement = (element) => {
